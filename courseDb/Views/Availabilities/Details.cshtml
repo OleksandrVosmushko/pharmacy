@@ -1,0 +1,48 @@
+﻿@model courseDb.Models.Availability
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Availability</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Availabilityid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Availabilityid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Productiontime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productiontime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Medicine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Medicine.Medicineid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Availabilityid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

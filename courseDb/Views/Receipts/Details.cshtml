@@ -1,0 +1,42 @@
+﻿@model courseDb.Models.Receipt
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Receipt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Receiptid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Receiptid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Medicine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Medicine.Medicineid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pharmacist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pharmacist.Pharmacistid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Receiptid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

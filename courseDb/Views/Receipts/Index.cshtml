@@ -1,0 +1,53 @@
+﻿@model IEnumerable<courseDb.Models.Receipt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Receiptid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medicine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pharmacist)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Receiptid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medicine.Medicineid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pharmacist.Pharmacistid)
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.Receiptid">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.Receiptid">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.Receiptid">Delete</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

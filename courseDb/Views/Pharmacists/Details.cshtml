@@ -1,0 +1,48 @@
+﻿@model courseDb.Models.Pharmacist
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pharmacist</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pharmacistid)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Pharmacistid)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Birthday)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Pharmacistid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
